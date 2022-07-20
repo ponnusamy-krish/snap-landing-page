@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+
+.menu-feature{
+    
+    transition: all 1s ease;
+}
+
+.arr{
+   
+    transition: all 1s ease;
+
+}
+.arr2{
+   
+   transition: all 1s ease;
+
+}
+    .features{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+    position: absolute;
+    height: 0vh;
+    width: 10vw;
+   background-color: white;
+    top: 7vh;
+    left: 15vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+    transition: all 1s ease;
+   overflow: hidden;
+   border-radius: 10px;
+
+
+}
+.companies-menu{
+  display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+    position: absolute;
+    height: 00vh;
+    width: 8vw;
+   background-color: white;
+    top: 7vh;
+    left: 27vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+    border-radius: 10px;
+    transition: all 1s ease;
+   overflow: hidden;
+}
+
+.hamenu{
+  display: none;
+
+}
+.mobile-menu{
+  display: none;
+}
+@media only screen and (max-width: 768px){
+  body{
+    overflow: hidden;
+  }
+  .hamenu{
+    display: block;
+    position: absolute;
+    left: 90vw;
+    top: 2.5vh;
+  }
+  .mobile-menu{
+    display: block;
+    position: absolute;
+    width: 60vw;
+    height: 100vh;
+    background-color: azure;
+    float: right;
+    transform: translateX(100vw);
+    transition: all 1s ease;
+
+  }
+
+  .reg-btn2{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    background: transparent;
+  }
+  .mobile-menu1{
+    display: flex;
+    height: 65%;
+   
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .mobile-menu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    margin-left: 20px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+  }
+  .close{
+    position: absolute;
+    top: 1vh;
+    left: 48vw;
+    z-index: 3;
+  }
+}
+  </style>
+</head>
+<body>
+
+<img src="./images/icon-menu.svg" alt="hamenu" class="hamenu" onclick="hamenu()">
+<div class="mobile-menu">
+<img src="./images/icon-close-menu.svg" alt="close" class="close" onclick="close()">
+  <div class="mobile-menu1">
+  <div class="mobile-menu-content">
+    <p>Features</p>
+    <p>Company</p>
+    <p>Careers</p>
+    <p>About</p>
+  </div>
+
+  <div class="buttons">
+    <p>Login</p>
+    <button class="reg-btn2">Register</button>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="companies-menu" onmouseover="start()" onmouseleave="end()">
+
+  <p>History</p>
+  <p>Our Team</p>
+  <p>Blog</p>
+</div>
+
+
+  <div class="features" onmouseover="hello()" onmouseleave="bye()">
+    <p><img src="./images/icon-todo.svg" alt="todo"> Todo List</p>
+    <p><img src="./images/icon-calendar.svg" alt="Calender"> Calender</p>
+    <p><img src="./images/icon-reminders.svg" alt="Reminders"> Reminders</p>
+    <p> <img src="./images/icon-planning.svg" alt="Planning"> Planning</p>
+  </div>
+
+  <nav>
+<div class="logo"><img src="./images/logo.svg" alt="logo"></div>
+
+
+<div class="menu">
+
+<p class="menu-feature" onmouseover="hello()" onmouseleave="bye()">Features <img src="./images/icon-arrow-down.svg" alt="arr" class="arr">
+
+
+
+
+</p>
+<p class="company" onmouseover="start()" onmouseleave="end()">Company <img src="./images/icon-arrow-down.svg" alt="arr" class="arr2"></p>
+<p>Careers</p>
+<p>About</p>
+</div>
+
+
+<div class="log-register">
+  <p>Login</p>
+  <button class="reg-btn">Register</button>
+</div>
+
+
+  </nav>
+
+<main>
+<div class="content">
+<div class="about">
+
+<div class="title">
+  <h1>  Make <br> remote work</h1>
+</div>
+
+<div class="para">
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+</div>
+
+<div class="learn-more">
+<button class="learnbtn">Learn more</button>
+</div>
+
+<div class="logos">
+<img src="./images/client-databiz.svg" alt="data-biz" class="foot-logo">
+<img src="./images/client-audiophile.svg" alt="audio" class="foot-logo">
+<img src="./images/client-meet.svg" alt="meet" class="foot-logo">
+<img src="./images/client-maker.svg" alt="maker" class="foot-logo">
+</div>
+
+
+
+</div>
+
+<div class="img">
+ 
+</div>
+
+
+
+</div>
+</main>
+
+
+</body>
+
+<script src="script.js">
+
+</script>
+
+</html>
